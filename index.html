@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>My Essay Scores</title>
+    <!-- Source fr-df data -->
+    <script defer src="data/fr_df_data.js"></script>
+    <!-- Source NLP functions -->
+    <script defer src="scripts/nlp.js"></script>
+    <!-- Essay Utilities Source -->
+    <script defer src="scripts/essay_utils.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+                                   user-scale=no, minimum-scale=1,
+                                   maximum-scale=1">
+
+    <!-- link to main stylesheet -->
+    <style>
+      body {
+          margin: 60px auto;
+          width: 70%;
+      }
+      nav ul, footer ul {
+          font-family:'Helvetica', 'Arial', 'Sans-Serif';
+          padding: 0px;
+          list-style: none;
+          font-weight: bold;
+      }
+      nav ul li, footer ul li {
+          display: inline;
+          margin-right: 20px;
+      }
+      a {
+          text-decoration: none;
+          color: #999;
+      }
+      a:hover {
+          text-decoration: underline;
+          color: #FF1493;
+      }
+      a.colorlink {
+          text-decoration: none;
+          color: #FF1493;
+      }
+      h1 {
+          font-size: 3em;
+          font-family:'Helvetica', 'Arial', 'Sans-Serif';
+      }
+      div.blurb {
+          text-align: center;
+
+      }
+
+      footer {
+          border-top: 1px solid #d5d5d5;
+          font-size: .8em;
+      }
+      #service_intro {
+        font-family: 'Helvetica', 'Arial', 'Sans-Serif', monospace;
+        width: 110vmin;
+        margin: auto auto;
+      }
+      #jhu_scores {
+        text-align: center;
+        font-family: 'Helvetica', 'Arial', 'Sans-Serif', monospace;
+      }
+
+      #avg_word_score {
+        font-weight: bold;
+        font-family: 'Helvetica', 'Arial', 'Sans-Serif', monospace;
+        font-size:18px;
+        text-align:center;
+        color: #FF1493;
+      }
+
+      #essay_box {
+        font-family: 'Helvetica', 'Arial', 'Sans-Serif', monospace;
+        font-size:25px;
+        margin: auto auto;
+        text-align: center;
+        width:120vmin;
+      }
+
+      #prompt {
+        background-color: inherit;
+        border-style: solid;
+        border-color: black;
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        height: 54vmin;
+        outline: none;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        resize: none;
+        overflow-y: scroll;
+        text-align: justify;
+        word-break: keep-all;
+        width: 100vmin;
+      }
+
+      #misc_score_metrics {
+        font-weight: bold;
+        font-family: 'Helvetica', 'Arial', 'Sans-Serif', monospace;
+        font-size:15px;
+        text-align:center;
+      }
+
+    </style>
+		<link rel="stylesheet" type="text/css" src="css/main.css">
+	</head>
+
+	<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="http://www.tessay.org/">TEssay</a></li>
+							<li><a href="http://www.tessay.org/services/">Services</a></li>
+							<li><a href="http://www.tessay.org/faq/">FAQ</a></li>
+							<li><a href="http://www.tessay.org/blog/">Blog</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+        <div class="blurb">
+        	<h1>My Essay Scores</h1>
+        </div><!-- /.blurb -->
+        <div id="service_intro">
+          <p>Score your college admission essay with <b><a href="http://www.tessay.org/">TEssay</a></b>'s
+            amazing <i>natural language processing</i> technology. Your essay is
+            scored by quantifying the words in terms of relevance and frequency
+            for high quality college admission essays. The model is developed using
+            essays that worked from <a href="https://apply.jhu.edu/application-process/essays-that-worked/">Johns Hopkins University</a> (JHU).</p>
+          <p>Texts imputted will be automatically deleted to protect your privacy.</p>
+        </div>
+        </br>
+        <div id="avg_word_score">
+          <!-- place holder -->
+          </br>
+        </div>
+        </br>
+        <div id="jhu_scores">
+          <p>JHU admission essay scores: Average XX, Minmum XX, Maximum XX</p>
+        </div>
+        </br>
+        <div id="essay_box">
+            <textarea id="prompt"
+              autofocus=1
+              wrap="hard"
+              rows="14"
+              cols="80"></textarea>
+        </div>
+        </br>
+        </br>
+        <div id="misc_score_metrics">
+          </br>
+          <!-- place holder -->
+        </div>
+
+			</div><!-- /.container -->
+      </br>
+      </br>
+			<footer>
+				<p><a href="http://www.tessay.org/privacy/">TEssay Privacy Policy</a> & <a href="http://www.tessay.org/terms/">Terms of Service</a><p>
+			</footer>
+		</body>
+	</html>
