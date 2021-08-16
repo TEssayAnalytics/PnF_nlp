@@ -21,9 +21,22 @@
         width: 110vmin;
         margin: auto auto;
       }
-      #jhu_scores {
+
+      #scoring_details {
+        font-family: 'Helvetica', 'Arial', 'Sans-Serif', monospace;
+        width: 110vmin;
+        margin: auto auto;
+      }
+
+      #example_scores {
         text-align: center;
         font-family: 'Helvetica', 'Arial', 'Sans-Serif', monospace;
+      }
+
+      #data_privacy {
+        font-family: 'Helvetica', 'Arial', 'Sans-Serif', monospace;
+        width: 110vmin;
+        margin: auto auto;
       }
 
       #avg_word_score {
@@ -85,21 +98,58 @@
       	<h1>Score My Essay</h1>
       </div><!-- /.blurb -->
       <div id="service_intro">
+        <h3>Introduction</h3>
         <p>
-          Score your college admission essay with <b><a href="http://www.tessay.org/">TEssay</a></b>'s
-          amazing <i>natural language processing</i> technology. Your essay is
-          scored by quantifying the words in terms of relevance and frequency
-          for high quality college admission essays. The model is developed using
-          essays that worked from
-          <a href="https://apply.jhu.edu/application-process/essays-that-worked/">Johns Hopkins University</a> (JHU).
+          Score your college admissions essay with <b><a href="http://www.tessay.org/">TEssay</a></b>'s
+          custom <i>admissions essay word-scoring</i> model. As a result of the
+          on-going <i>Data Science</i> initiative in our
+          <b><a href="http://www.tessay.org/analytics/">Analytics</a></b>
+          branch we applied various <b>natural language processing</b> methods
+          to an <i>admissions essay corpus</i> to generate a word-scoring model.
+          Currently our <i>model-training</i> corpus is composed solely
+          of essays written by
+          <a href="https://apply.jhu.edu/application-process/essays-that-worked/">Johns Hopkins University</a>
+          (JHU) <i>admitted</i> students.
         </p>
+      </div>
+      <div id="model_details">
+        <h3>Understanding The Model</h3>
+      </div>
+      <div id="scoring_details">
+        <h3>Interpreting My Score</h3>
+        <p>
+          The main score to focus on is the <u><i>Avg. Word Score</i></u>. As the
+          name implies, this score is the <i>average</i> score <i>per</i> word
+          and is calculated by taking the <b>total score</b> and dividing by
+          the <b>total words</b> (calculated and displayed directly below the
+          <i>essay input</i> box). Think of this like a measure of
+          <i>word efficiency</i> or <i>density</i>.
+        </p>
+        <p>
+          Once a score is calculated, you are now able to compare how close
+          your <i>writing style/content</i> is to some <i>pre-calculated</i>
+          data for different colleges shown in the table below. This will give
+          you some of idea of where <i>your essay quality</i> stands in
+          comparison to the scores of the colleges below.
+        <div id="example_scores">
+          <table>
+            <tbody>
+              <tr>
+                <th>College</th>
+                <th>Avg. Word Score</th>
+                <th>Maximum</th>
+                <th>Minimum</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="data_privacy">
+        <h3>Data Privacy</h3>
         <p>
           All text entered below remains <i>client-side</i> and
           will be <i>automatically deleted</i> to protect your privacy.
         </p>
-      </div>
-      <div id="jhu_scores">
-        <p>JHU admission essay scores: Average XX, Minmum XX, Maximum XX</p>
       </div>
       </br>
       <div id="avg_word_score">
@@ -107,7 +157,6 @@
         </br>
       </div>
       </br>
-
       </br>
       <div id="essay_box">
           <textarea id="prompt"
