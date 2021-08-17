@@ -1,3 +1,4 @@
+// dictionary of fr-df word scores
 FR_DF_VALUES = {
   "my": 3.311189006582217,
   "didnt": 2.7006987466629617,
