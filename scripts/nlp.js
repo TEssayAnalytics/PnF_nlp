@@ -7,7 +7,7 @@ function tokenize(text) {
   let alpha_text = lower_text.replace(/[^a-z0-9\s]/gi, '');
 
   // convert line breaks to spices
-  let cleaned_text = alpha_text.replace(/[\r?\n|\r]+/gm, ' ');
+  let cleaned_text = alpha_text.replace(/[\r\n|\r\r]+/gm, ' ');
 
   // split on spaces
   return cleaned_text.split(' ');

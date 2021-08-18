@@ -23,7 +23,7 @@ function check_words(e) {
         e.preventDefault();
 
         // now we have to start with original text
-        let text = this.value.replace(/[\r?\n|\r]+/gm, ' ');
+        let text = this.value.replace(/[\r\n|\r\r]+/gm, ' ');
 
         // now get original UN-tokenized words (all original case/punctuation)
         let original_words = text.split(' ');
