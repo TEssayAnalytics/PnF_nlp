@@ -59,7 +59,8 @@ function check_words(e) {
 
     // update score
     avg_score_div.innerHTML =
-      'Avg. Word Score: ' + (word_count != 0 ? score/word_count : 0).toFixed(4);
+      'Relevance-Density Score: ' +
+      (word_count != 0 ? score/word_count : 0).toFixed(4);
     misc_score_div.innerHTML =
       'Total Words: ' + total_words_template +
       '  |  ' +
