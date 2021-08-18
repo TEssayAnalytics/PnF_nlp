@@ -45,7 +45,7 @@ function check_words(e) {
     let score = score_fr_df(clean_words);
 
     // get output elements
-    const avg_score_div = document.getElementById('avg_word_score');
+    const rd_score_div = document.getElementById('rd_score');
     const misc_score_div = document.getElementById('misc_score_metrics');
 
     // setup total words template
@@ -58,7 +58,7 @@ function check_words(e) {
     }
 
     // update score
-    avg_score_div.innerHTML =
+    rd_score_div.innerHTML =
       'Relevance-Density Score: ' +
       (word_count != 0 ? score/word_count : 0).toFixed(4);
     misc_score_div.innerHTML =
