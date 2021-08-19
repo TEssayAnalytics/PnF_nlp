@@ -27,7 +27,7 @@ function check_words(e) {
     var clean_words = tokenize(this.value);
 
     // get word count
-    let word_count = get_word_length(clean_words);
+    let word_count = clean_words.length;
 
     // now check if words are over limit
     if (word_count > MAX_WORDS && VALID_KEYS.indexOf(e.key) == -1) {
@@ -38,7 +38,7 @@ function check_words(e) {
         let text = this.value.replace(/[\r\n|\r\r]+/gm, ' ');
 
         // now get original UN-tokenized words (all original case/punctuation)
-        let original_words = text.split(' ');
+        let original_words = text.split(' ').filter(Boolean);
 
         // now onl get max words worth of words (without any line breaks)
         let subset_words = original_words.slice(0, MAX_WORDS).concat(['']);

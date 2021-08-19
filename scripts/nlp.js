@@ -22,12 +22,7 @@ function tokenize(text) {
   let cleaned_text = alpha_text.replace(/[\r\n|\r\r]+/gm, ' ');
 
   // split on spaces
-  return cleaned_text.split(' ');
-}
-
-function get_word_length(words) {
-  // remove empty strings
-  return words.filter(Boolean).length;
+  return cleaned_text.split(' ').filter(Boolean);
 }
 
 function score_fr_df(words) {
