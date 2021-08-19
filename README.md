@@ -1,5 +1,5 @@
 # About
-Admissions essay scoring application for [tessay.org](http://tessay.org).
+Admissions essay scoring application for TEssay at http://www.tessay.org/PnF_nlp/.
 
 # License
 Copyright (C) 2021 J.D.A & P.G. TEssay (http://tessay.org). All Rights Reserved.
