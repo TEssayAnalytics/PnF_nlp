@@ -179,3 +179,7 @@ footer.p {
     font-size: 18px;
   }
 }
+
+caption {
+  caption-side: bottom;
+}
