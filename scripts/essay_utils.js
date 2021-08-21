@@ -27,30 +27,12 @@ function check_words(e) {
     var clean_words = tokenize(this.value);
 
     // get word count
-    let word_count = clean_words.length;
+    const word_count = clean_words.length;
 
     // now check if words are over limit
-    if (word_count > MAX_WORDS && VALID_KEYS.indexOf(e.key) == -1) {
-        // prevent the default response
-        e.preventDefault();
-
-        // now we have to start with original text
-        let text = this.value.replace(/[\r\n|\r\r]+/gm, ' ');
-
-        // now get original UN-tokenized words (all original case/punctuation)
-        let original_words = text.split(' ').filter(Boolean);
-
-        // now onl get max words worth of words (without any line breaks)
-        let subset_words = original_words.slice(0, MAX_WORDS).concat(['']);
-
-        // update textarea text with line breaks removed and words < MAX_WORDS
-        this.value = subset_words.join(' ');
-
+    if (word_count > MAX_WORDS) {
         // update clean words for scoring
         clean_words = clean_words.slice(0, MAX_WORDS);
-
-        // update words count
-        word_count = MAX_WORDS;
     }
 
     // pass text to scoring func (from: statics/nlp.js)
@@ -60,23 +42,26 @@ function check_words(e) {
     const rd_score_div = document.getElementById('rd_score');
     const misc_score_div = document.getElementById('misc_score_metrics');
 
-    // setup total words template
+    // setup total words and total score template
     var total_words_template = word_count;
+    var total_score_template = score.toFixed(4);
 
     // finally check if max words reached
-    if (word_count == MAX_WORDS) {
+    if (clean_words.length == MAX_WORDS) {
       // update total words template with maximum words warning
-      total_words_template = word_count + ' ' + '(maximum words limit)';
+      total_words_template = total_words_template + ' ' + '(maximum words 650)';
+      total_score_template =
+        total_score_template + ' ' + '(only scoring first 650 words)'
     }
 
     // update score
     rd_score_div.innerHTML =
       'Relevance-Density Score: ' +
-      (word_count != 0 ? score/word_count : 0).toFixed(4);
+      (word_count != 0 ? score/clean_words.length : 0).toFixed(4);
     misc_score_div.innerHTML =
       'Total Words: ' + total_words_template +
       '  |  ' +
-      'Total Score: ' + score.toFixed(4);
+      'Total Score: ' + total_score_template;
 }
 
 /*
