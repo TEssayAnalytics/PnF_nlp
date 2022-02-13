@@ -1,5 +1,5 @@
 # About
-Admissions essay scoring application for TEssay at http://www.tessay.org/PnF_nlp/.
+Admissions essay scoring application for TEssay Analytics at http://www.tessay.org/PnF_nlp/.
 
 # License
 Copyright (C) 2021 TEssay Analytics (http://tessay.org). All Rights Reserved.
