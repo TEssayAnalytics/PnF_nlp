@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2021 J.D.A & P.G. TEssay (http://tessay.org). All Rights Reserved.
+Copyright (C) 2021 TEssay Analytics (http://tessay.org). All Rights Reserved.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
